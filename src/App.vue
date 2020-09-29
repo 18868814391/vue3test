@@ -2,8 +2,9 @@
   <div class="appCon">
     <h1>{{ father }}</h1>
     <div class="navBox">
-      <router-link to="/">nav1</router-link>
-      <router-link to="/contact">nav2</router-link>
+      <router-link to="/"><button>home-page</button></router-link>
+      <router-link to="/contact"><button>contact-page</button></router-link>
+      <router-link to="/hooks"><button>hooks-page</button></router-link>
     </div>
     <router-view />
   </div>

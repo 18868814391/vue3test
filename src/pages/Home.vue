@@ -18,6 +18,7 @@
 
 <script>
 //ref 由传入值返回一个响应式的、可变的且只有value一个属性的ref对象 （简单数据）
+//  string 和 number 是只有值，没有引用的  故vue无论defineProperty proxy均无法实时监听  所以必须包装对象ref(3) data(2)
 // reactive   reactive的作用是将对象包装成响应式对象——通过 Proxy代理后的对象。set forceUpdate滚出
 import { ref, reactive, toRefs, provide, inject } from 'vue'
 
