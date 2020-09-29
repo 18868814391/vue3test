@@ -1,0 +1,50 @@
+<template>
+  <div class="appCon">
+    <h1>{{ father }}</h1>
+    <div class="navBox">
+      <router-link to="/">nav1</router-link>
+      <router-link to="/contact">nav2</router-link>
+    </div>
+    <router-view />
+  </div>
+</template>
+
+<script>
+import { ref, provide, inject } from 'vue'
+export default {
+  setup() {
+    //通过ref+provide提供了父节点往下全部节点的响应式数据传递
+    const father = ref('i am frome father app')
+    provide('appdata', father)
+    return {
+      father,
+    }
+  },
+  data() {
+    return {
+      vv1: 'Hello Vue 3333!',
+    }
+  },
+}
+</script>
+
+<style lang="less" scoped>
+.appCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .navBox {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+img {
+  width: 200px;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
