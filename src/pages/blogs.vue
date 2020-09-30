@@ -23,9 +23,9 @@ import { getBlogs } from '@/hooks/hook_list'
 export default {
   setup() {
     const { tabsList } = getTabs()
-    const { dataList } = getBlogs()
+    const { dataList, clickTab } = getBlogs()
     const tabSearch = (d) => {
-      console.log(d)
+      clickTab(d)
     }
     return {
       tabsList,

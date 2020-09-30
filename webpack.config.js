@@ -64,13 +64,6 @@ module.exports = (env = {}) => ({
         changeOrigin: true,
       },
     ],
-    // proxy: {
-    //   '/yii': {
-    //     target: 'https://www.shenyifan.top/apis/syf/php',
-    //     ws: true,
-    //     changeOrigin: true,
-    //   },
-    // },
     inline: true,
     hot: true,
     stats: 'minimal',

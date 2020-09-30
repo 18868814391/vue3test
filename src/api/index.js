@@ -19,3 +19,10 @@ export function yiiBlogTab(params) {
     data: params,
   })
 } // yii 获取blog标签数
+export function yiiBlogSearch(params) {
+  return request({
+    url: '/yii/web/index.php?r=blog/search',
+    method: 'post',
+    data: params,
+  })
+} // yii博客搜索

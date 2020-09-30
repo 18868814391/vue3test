@@ -1,18 +1,20 @@
 <template>
-  <div>I am in Home page</div>
-  <div class="flexBox">
-    <text>ref:{{ count }}</text>
-    <text>reactive:{{ reactiveField }}</text>
-    <text>reactiveA:{{ a[0].a.a }}</text>
-    <text>dataA:{{ dataA }}</text>
-    <text>objA:{{ objA[0] }}</text>
-  </div>
-  <div class="flexBox">
-    <button @click="addRef">addRef</button>
-    <button @click="addReactive">addReactive</button>
-    <button @click="addA">addA</button>
-    <button @click="addDataA">addDataA</button>
-    <button @click="addobjA">addobjA</button>
+  <div>
+    <div>I am in Home page</div>
+    <div class="flexBox">
+      <text>ref:{{ count }}</text>
+      <text>reactive:{{ reactiveField }}</text>
+      <text>reactiveA:{{ a[0].a.a }}</text>
+      <text>dataA:{{ dataA }}</text>
+      <text>objA:{{ objA[0] }}</text>
+    </div>
+    <div class="flexBox">
+      <button @click="addRef">addRef</button>
+      <button @click="addReactive">addReactive</button>
+      <button @click="addA">addA</button>
+      <button @click="addDataA">addDataA</button>
+      <button @click="addobjA">addobjA</button>
+    </div>
   </div>
 </template>
 

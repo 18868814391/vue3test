@@ -5,26 +5,26 @@
       <router-link to="/"><button>home-page</button></router-link>
       <router-link to="/contact"><button>contact-page</button></router-link>
       <router-link to="/hooks"><button>hooks-page</button></router-link>
-      <router-link to="/blogs"><button>blogs-page</button></router-link>
+      <button @click="goPage('/blogs')">blogs-page</button>
     </div>
     <router-view />
   </div>
 </template>
 
 <script>
-import { ref, provide, inject } from 'vue'
+import { ref, provide, inject, getCurrentInstance } from 'vue'
 export default {
   setup() {
+    const { ctx } = getCurrentInstance()
+    const goPage = (e) => {
+      ctx.$router.push(e)
+    }
     //通过ref+provide提供了父节点往下全部节点的响应式数据传递
     const father = ref('i am frome father app')
     provide('appdata', father)
     return {
       father,
-    }
-  },
-  data() {
-    return {
-      vv1: 'Hello Vue 3333!',
+      goPage,
     }
   },
 }
