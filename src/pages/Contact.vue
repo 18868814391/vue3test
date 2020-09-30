@@ -1,8 +1,10 @@
 <template>
-  <div>I am in Contact</div>
-  <div>{{ appdata }}</div>
-  <button @click="changeFather()">changeFatherData</button>
-  <Comp1 v-model:data1_c="data1" v-model:data2_c="data2"></Comp1>
+  <div>
+    <div>I am in Contact</div>
+    <div>{{ appdata }}</div>
+    <button @click="changeFather()">changeFatherData</button>
+    <Comp1 v-model:data1_c="data1" v-model:data2_c="data2"></Comp1>
+  </div>
 </template>
 
 <script>

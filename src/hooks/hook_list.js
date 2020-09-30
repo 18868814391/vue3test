@@ -44,6 +44,10 @@ export function getBlogs() {
     window.addEventListener('scroll', goBottom)
   })
 
+  onMounted(() => {
+    console.log('i am mounted too')
+  })
+
   onUnmounted(() => {
     window.removeEventListener('scroll', goBottom)
   })

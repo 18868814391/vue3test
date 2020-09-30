@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  setup() {},
   props: {
     data1_c: {
       type: String,
@@ -17,6 +16,7 @@ export default {
       default: '',
     },
   },
+  setup() {},
 }
 </script>
 
