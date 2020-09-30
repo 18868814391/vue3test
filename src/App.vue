@@ -5,6 +5,7 @@
       <router-link to="/"><button>home-page</button></router-link>
       <router-link to="/contact"><button>contact-page</button></router-link>
       <router-link to="/hooks"><button>hooks-page</button></router-link>
+      <router-link to="/blogs"><button>blogs-page</button></router-link>
     </div>
     <router-view />
   </div>

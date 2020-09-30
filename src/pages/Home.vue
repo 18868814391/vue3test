@@ -5,7 +5,7 @@
     <text>reactive:{{ reactiveField }}</text>
     <text>reactiveA:{{ a[0].a.a }}</text>
     <text>dataA:{{ dataA }}</text>
-    <text>objA:{{ objA[0][0].a }}</text>
+    <text>objA:{{ objA[0] }}</text>
   </div>
   <div class="flexBox">
     <button @click="addRef">addRef</button>
@@ -56,13 +56,7 @@ export default {
   data() {
     return {
       dataA: 0,
-      objA: [
-        [
-          {
-            a: 1,
-          },
-        ],
-      ],
+      objA: ['a', 'b', 'c'],
     }
   },
   created() {},
@@ -77,7 +71,7 @@ export default {
       this.dataA++
     },
     addobjA() {
-      this.objA[0][0].a++
+      this.objA[0] = 'x'
     },
   },
 }

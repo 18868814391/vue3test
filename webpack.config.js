@@ -56,6 +56,21 @@ module.exports = (env = {}) => ({
     }),
   ],
   devServer: {
+    proxy: [
+      {
+        context: ['/yii', '/upload'],
+        target: 'https://www.shenyifan.top/apis/syf/php',
+        ws: true,
+        changeOrigin: true,
+      },
+    ],
+    // proxy: {
+    //   '/yii': {
+    //     target: 'https://www.shenyifan.top/apis/syf/php',
+    //     ws: true,
+    //     changeOrigin: true,
+    //   },
+    // },
     inline: true,
     hot: true,
     stats: 'minimal',

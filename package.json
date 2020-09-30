@@ -5,6 +5,7 @@
     "build": "webpack --env.prod"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "less": "^3.12.2",
     "less-loader": "^7.0.1",
     "vue": "^3.0.0-beta.1",
