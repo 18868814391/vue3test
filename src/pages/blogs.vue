@@ -2,7 +2,7 @@
   <div class="myBlog">
     <div class="myBlog-tab">
       <div
-        class="myBlog-tabs"
+        class="myBlog-tabs1"
         v-for="(value, key) in tabsList"
         :key="key"
         @click="tabSearch(key)"
@@ -38,8 +38,8 @@ export default {
 
 <style lang="less" scoped>
 .myBlog {
-  width: 375px;
-  min-height: 100px;
+  width: 750px;
+  min-height: 200px;
   background: lavender;
   display: flex;
   flex-direction: column;
@@ -48,20 +48,21 @@ export default {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    .myBlog-tabs {
-      font-size: 12px;
-      margin: 10px;
-      border: 1px solid #000;
-      padding: 5px;
+    .myBlog-tabs1 {
+      font-size: 18px;
+      display: inline-block;
+      margin: 20px;
+      border: 2px solid #000;
+      padding: 10px;
       cursor: pointer;
     }
   }
   .myBlogs {
     width: 100%;
-    border: 1px solid #000;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 3px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 6px;
     box-sizing: border-box;
   }
 }

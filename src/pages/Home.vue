@@ -6,7 +6,7 @@
       <text>reactive:{{ reactiveField }}</text>
       <text>reactiveA:{{ a[0].a.a }}</text>
       <text>dataA:{{ dataA }}</text>
-      <text>objA:{{ objA[0] }}</text>
+      <text>{{ objA}}</text>
     </div>
     <div class="flexBox">
       <button @click="addRef">addRef</button>
@@ -81,8 +81,8 @@ export default {
 
 <style scoped>
 .flexBox {
-  width: 500px;
-  height: 50px;
+  width: 750px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;

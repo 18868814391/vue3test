@@ -5,7 +5,7 @@
       <router-link to="/"><button>home-page</button></router-link>
       <router-link to="/contact"><button>contact-page</button></router-link>
       <router-link to="/hooks"><button>hooks-page</button></router-link>
-      <button @click="goPage('/blogs')">blogs-page</button>
+      <router-link to="/blogs"><button>blogs-page</button></router-link>
     </div>
     <router-view />
   </div>
@@ -30,21 +30,32 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
+body{
+  font-size: 30px;
+}
+button{
+  height: 70px;
+  font-size: 30px;
+}
+input{
+  width: 250px;
+  height: 50px;
+}
 .appCon {
   display: flex;
   flex-direction: column;
   align-items: center;
   .navBox {
-    width: 300px;
-    height: 100px;
+    width: 600px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
 }
 img {
-  width: 200px;
+  width: 400px;
 }
 h1 {
   font-family: Arial, Helvetica, sans-serif;
