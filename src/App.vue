@@ -14,13 +14,13 @@
 <script>
 import { ref, provide, inject, getCurrentInstance } from 'vue'
 export default {
-  setup() {
+  setup(a,b) {
     const { ctx } = getCurrentInstance()
     const goPage = (e) => {
       ctx.$router.push(e)
     }
     //通过ref+provide提供了父节点往下全部节点的响应式数据传递
-    const father = ref('i am frome father app')
+    const father = ref('i am data in app.vue')
     provide('appdata', father)
     return {
       father,

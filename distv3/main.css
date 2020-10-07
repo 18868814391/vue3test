@@ -1,5 +1,5 @@
 
-.flexBox[data-v-b02f4068] {
+.flexBox[data-v-4da2cee4] {
   width: 750px;
   height: 100px;
   display: flex;
@@ -8,7 +8,18 @@
 }
 
 
-
+.ccinps[data-v-3a50d21e]{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:50px ;
+}
+.ccinp[data-v-3a50d21e]{
+  width: 600px;
+  height: 100px;
+  margin: 10px 0;
+  font-size: 30px;
+}
 
 
 /*# sourceMappingURL=main.css.map*/

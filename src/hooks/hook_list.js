@@ -34,7 +34,7 @@ export function getBlogs() {
       document.documentElement.scrollTop ||
       document.body.scrollTop
     if (clientHeight + scrollTop == scrollHeight) {
-      console.log('触底了啦！！！！！！')
+      alert('触底了啦！！！！！！')
     }
   }
 
