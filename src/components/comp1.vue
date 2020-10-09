@@ -1,12 +1,23 @@
 <template>
   <div class="ccinps">
     <div>I am child components</div>
-    <input class="ccinp" type="text" placeholder="i am in comp1" v-model="data1_c" />
-    <input class="ccinp" type="text" placeholder="i am in comp1" v-model="data2_c" />  
+    <input
+      class="ccinp"
+      type="text"
+      placeholder="i am in comp1"
+      v-model="data1_c"
+    />
+    <input
+      class="ccinp"
+      type="text"
+      placeholder="i am in comp1"
+      v-model="data2_c"
+    />
   </div>
 </template>
 
 <script>
+import { ref, reactive, toRefs } from 'vue'
 export default {
   props: {
     data1_c: {
@@ -18,20 +29,23 @@ export default {
       default: '',
     },
   },
-  setup() {
-    
+  setup(props, context) {
+    const state = reactive({
+      data1_c: props.data1_c,
+      data2_c: props.data2_c,
+    })
   },
 }
 </script>
 
 <style scoped>
-.ccinps{
+.ccinps {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top:50px ;
+  margin-top: 50px;
 }
-.ccinp{
+.ccinp {
   width: 600px;
   height: 100px;
   margin: 10px 0;
