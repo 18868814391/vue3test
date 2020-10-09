@@ -5,7 +5,7 @@
         class="myBlog-tabs1"
         v-for="(value, key) in tabsList"
         :key="key"
-        @click="tabSearch(key)"
+        @click="clickTab(key)"
       >
         {{ key }}({{ value }})
       </div>
@@ -24,13 +24,10 @@ export default {
   setup() {
     const { tabsList } = getTabs()
     const { dataList, clickTab } = getBlogs()
-    const tabSearch = (d) => {
-      clickTab(d)
-    }
     return {
       tabsList,
       dataList,
-      tabSearch,
+      clickTab,
     }
   },
 }

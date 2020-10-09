@@ -5,7 +5,7 @@ import router from '@/router/index.js'
 import { store } from '@/store/index.js'
 import './permission.js'
 
-// import { Button } from 'ant-design-vue'
+// import { Button } from 'ant-design-vue'  //太大了先不用
 // import 'ant-design-vue/lib/button/style/css'
 // app.config.productionTip = false
 // app.use(Button)
