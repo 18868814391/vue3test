@@ -1,5 +1,5 @@
 <template>
-  <div>I am in hooks</div>
+  <div v-highlight="'yellow'">I am in hooks</div>
   <div>{{ x }}-----{{ y }}</div>
 </template>
 

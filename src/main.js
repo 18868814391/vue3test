@@ -9,6 +9,14 @@ import './permission.js'
 // import 'ant-design-vue/lib/button/style/css'
 // app.config.productionTip = false
 // app.use(Button)
+app.directive('highlight', {
+  beforeMount(el, binding, vnode, prevVnode) {
+    // let spinner = document.createElement('div')
+    // spinner.innerHTML = `<i>dir</i>`
+    // el.appendChild(spinner)
+    el.style.background = binding.value
+  },
+})
 
 app.use(router) //Vue.use(router)被舍弃
 app.use(store)
