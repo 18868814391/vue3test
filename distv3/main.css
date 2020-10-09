@@ -1,24 +1,24 @@
 
-.flexBox[data-v-4da2cee4] {
-  width: 750px;
-  height: 100px;
+.flexBox[data-v-5020bdc8] {
+  width: 80vw;
+  height: 13.333vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 
-.ccinps[data-v-3a50d21e]{
+.ccinps[data-v-145cbbb8] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top:50px ;
+  margin-top: 6.667vw;
 }
-.ccinp[data-v-3a50d21e]{
-  width: 600px;
-  height: 100px;
-  margin: 10px 0;
-  font-size: 30px;
+.ccinp[data-v-145cbbb8] {
+  width: 80vw;
+  height: 13.333vw;
+  margin: 1.333vw 0;
+  font-size: 4vw;
 }
 
 

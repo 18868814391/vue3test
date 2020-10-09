@@ -40,7 +40,6 @@ body {
   font-size: 30px;
 }
 button {
-  height: 70px;
   font-size: 30px;
 }
 input {

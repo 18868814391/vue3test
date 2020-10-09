@@ -5,6 +5,7 @@
     "build": "webpack --env.prod"
   },
   "dependencies": {
+    "ant-design-vue": "^2.0.0-beta.10",
     "autoprefixer": "^10.0.1",
     "axios": "^0.20.0",
     "css-loader": "^4.3.0",
