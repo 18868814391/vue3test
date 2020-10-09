@@ -32,16 +32,18 @@ module.exports = (env = {}) => ({
       {
         test: /\.css$/,
         use: [
+          // 'style-loader',
           {
             loader: MiniCssExtractPlugin.loader,
             options: { hmr: !env.prod },
           },
-          'css-loader',
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          'postcss-loader',
         ],
       },
       {
         test: /\.less$/,
-        loader: 'style-loader!css-loader!less-loader',
+        loader: 'style-loader!css-loader!less-loader!postcss-loader',
       },
     ],
   },

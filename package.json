@@ -5,6 +5,7 @@
     "build": "webpack --env.prod"
   },
   "dependencies": {
+    "autoprefixer": "^10.0.1",
     "axios": "^0.20.0",
     "css-loader": "^4.3.0",
     "less": "^3.12.2",
@@ -31,12 +32,11 @@
   },
   "postcss": {
     "plugins": {
-      "autoprefixer": {},
-      "postcss-cssnext": {},
       "postcss-px-to-viewport": {
-        "viewportWidth": 375,
+        "viewportWidth": 750,
         "minPixelValue": 1,
-        "unitPrecision": 3
+        "unitPrecision": 3,
+        "viewportUnit": "vw"
       }
     }
   }
