@@ -9,9 +9,14 @@
       >
         {{ key }}({{ value }})
       </div>
-      <div class="myBlogs" v-for="(item, index) in dataList" :key="index">
+      <router-link
+        :to="{ path: '/blogDetail', query: { id: item.id } }"
+        class="myBlogs"
+        v-for="(item, index) in dataList"
+        :key="index"
+      >
         {{ item.title }}
-      </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -36,17 +41,17 @@ export default {
 <style lang="less" scoped>
 .myBlog {
   width: 750px;
-  min-height: 200px;
   background: lavender;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   .myBlog-tab {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     .myBlog-tabs1 {
-      font-size: 18px;
+      font-size: 16px !important;
       display: inline-block;
       margin: 20px;
       border: 2px solid #000;

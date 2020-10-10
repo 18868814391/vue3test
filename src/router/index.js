@@ -3,6 +3,7 @@ import Home from '@/pages/Home.vue'
 import Contact from '@/pages/Contact.vue'
 import Hooks from '@/pages/Hooks.vue'
 import Blogs from '@/pages/blogs.vue'
+import blogDetail from '@/pages/blogDetail.vue'
 
 const routerHistory = createWebHistory() //相当于原本mode:history
 
@@ -24,6 +25,10 @@ const router = createRouter({
     {
       path: '/blogs',
       component: Blogs,
+    },
+    {
+      path: '/blogDetail',
+      component: blogDetail,
     },
   ],
 })
