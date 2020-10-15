@@ -1,7 +1,7 @@
 <template>
   <div class="appCon">
     <h3>{{ father }}</h3>
-    <h3>i am data in store {{ count }}</h3>
+    <!-- <h3>i am data in store {{ count }}</h3> -->
     <div class="navBox">
       <router-link to="/"><button>home-page</button></router-link>
       <router-link to="/contact"><button>contact-page</button></router-link>
@@ -22,7 +22,7 @@ export default {
     const goPage = (e) => {
       ctx.$router.push(e)
     }
-    const count = computed(() => ctx.$store.state.count)
+    // const count = computed(() => ctx.$store.state.count)
     //通过ref+provide提供了父节点往下全部节点的响应式数据传递
     const father = ref('i am data in app.vue')
     provide('appdata', father)

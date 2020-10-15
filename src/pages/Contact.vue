@@ -17,10 +17,10 @@ export default {
   setup() {
     const { ctx } = getCurrentInstance()
     const appdata = inject('appdata')
-    const count = computed(() => ctx.$store.state.count)
-    const addMount = () => {
-      ctx.$store.dispatch('add')
-    }
+    // const count = computed(() => ctx.$store.state.count)
+    // const addMount = () => {
+    //   ctx.$store.dispatch('add')
+    // }
     const data1 = ref('123')
     const data2 = ref('456')
     const changeFather = () => {
