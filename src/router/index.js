@@ -11,23 +11,23 @@ const router = createRouter({
   history: routerHistory,
   routes: [
     {
-      path: '/',
+      path: '/vue3test',
       component: Home,
     },
     {
-      path: '/contact',
+      path: '/vue3test/contact',
       component: Contact,
     },
     {
-      path: '/hooks',
+      path: '/vue3test/hooks',
       component: Hooks,
     },
     {
-      path: '/blogs',
+      path: '/vue3test/blogs',
       component: Blogs,
     },
     {
-      path: '/blogDetail',
+      path: '/vue3test/blogDetail',
       component: blogDetail,
     },
   ],

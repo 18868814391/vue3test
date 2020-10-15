@@ -3,10 +3,10 @@
     <h3>{{ father }}</h3>
     <!-- <h3>i am data in store {{ count }}</h3> -->
     <div class="navBox">
-      <router-link to="/"><button>home-page</button></router-link>
-      <router-link to="/contact"><button>contact-page</button></router-link>
-      <router-link to="/hooks"><button>hooks-page</button></router-link>
-      <router-link to="/blogs"><button>blogs-page</button></router-link>
+      <router-link to="/vue3test"><button>home-page</button></router-link>
+      <router-link to="/vue3test/contact"><button>contact-page</button></router-link>
+      <router-link to="/vue3test/hooks"><button>hooks-page</button></router-link>
+      <router-link to="/vue3test/blogs"><button>blogs-page</button></router-link>
     </div>
     <router-view />
   </div>
