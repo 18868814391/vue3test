@@ -31,11 +31,31 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 .blogdetail {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  .tit{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+  }
+  .ind{
+    width: 100%;
+    font-size: 10px;
+    color: #666;
+    margin: 10px 0;
+  }
+  .txt{
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    font-size: 28px;
+    img{
+      width: 100%;
+    }
+  }
 }
 </style>
