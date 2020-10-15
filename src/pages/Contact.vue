@@ -31,8 +31,8 @@ export default {
       data1,
       data2,
       changeFather,
-      count,
-      addMount,
+      // count,
+      // addMount,
     }
   },
   components: {

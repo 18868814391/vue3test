@@ -29,7 +29,7 @@ export default {
     return {
       father,
       goPage,
-      count,
+      // count,
     }
   },
 }
