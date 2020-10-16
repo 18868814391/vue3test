@@ -16,6 +16,7 @@
 import { ref, provide, inject, getCurrentInstance, computed } from 'vue'
 export default {
   setup(props, context) {
+    console.log('pop',context)
     const { ctx } = getCurrentInstance()
     console.log(ctx)
     console.log('iamrouter', ctx.$router)

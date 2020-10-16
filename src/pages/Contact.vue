@@ -3,9 +3,12 @@
     <div>{{ appdata }}</div>
     <button @click="changeFather()">changeAPPData</button>
     <br />
+    <br />
     <div>i am data1 in father: {{ data1 }}</div>
     <div>i am data2 in father: {{ data2 }}</div>
     <Comp1 ref="RefChilde" :data1_c="data1" :data2_c="data2" @FatherTalk="FatherTalk"></Comp1>
+    <br />
+    <br />    
     <div @click="trigerChild">let child talk</div>
   </div>
 </template>

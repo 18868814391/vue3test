@@ -1,7 +1,8 @@
 <template>
   <div class="ccinps">
     <div>I am child components</div>
-    <div>{{data1_c.data1}}<span @click="changeIt()"> let change obj !</span></div>
+    <div>{{data1_c.data1}}<button @click="changeIt()"> let change obj !</button></div>
+    <br/>
     <input class="ccinp" type="text" placeholder="i am in comp1" v-model="data2_c"/>
     <div @click="ftk">let father talk</div>
   </div>
