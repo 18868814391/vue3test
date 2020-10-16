@@ -5,7 +5,8 @@
     <br />
     <div>i am data1 in father: {{ data1 }}</div>
     <div>i am data2 in father: {{ data2 }}</div>
-    <Comp1 :data1_c="data1" :data2_c="data2"></Comp1>
+    <Comp1 ref="RefChilde" :data1_c="data1" :data2_c="data2" @FatherTalk="FatherTalk"></Comp1>
+    <div @click="trigerChild">let child talk</div>
   </div>
 </template>
 
@@ -13,7 +14,7 @@
 import { provide, inject, ref, getCurrentInstance, computed } from 'vue'
 import Comp1 from '@/components/comp1.vue'
 export default {
-  setup() {
+  setup(props, context) {
     const { ctx } = getCurrentInstance()
     const appdata = inject('appdata')
     // const count = computed(() => ctx.$store.state.count)
@@ -22,7 +23,14 @@ export default {
     // }
     const changeFather = () => {
       appdata.value = 'children change it'
-    }    
+    }
+    const FatherTalk=()=>{
+      alert('i am father')
+    }
+    const RefChilde = ref(null)
+    const trigerChild=()=>{
+      RefChilde.value.alr()
+    }
     const data1 = ref('123')
     const data2 = ref('456')
     provide('data1_c', data1)
@@ -32,6 +40,9 @@ export default {
       data1,
       data2,
       changeFather,
+      FatherTalk,
+      trigerChild,
+      RefChilde
       // count,
       // addMount,
     }
