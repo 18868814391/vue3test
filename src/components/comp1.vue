@@ -1,39 +1,21 @@
 <template>
   <div class="ccinps">
-    <div>I am child components</div>
-    <input
-      class="ccinp"
-      type="text"
-      placeholder="i am in comp1"
-      v-model="data1_c"
-    />
-    <input
-      class="ccinp"
-      type="text"
-      placeholder="i am in comp1"
-      v-model="data2_c"
-    />
+    <div @click="eem()">I am child components</div>
+    <input class="ccinp" type="text" placeholder="i am in comp1" v-model="data1_c"/>
+    <input class="ccinp" type="text" placeholder="i am in comp1" v-model="data2_c"/>
   </div>
 </template>
 
 <script>
-import { ref, reactive, toRefs } from 'vue'
+import { ref, reactive, toRefs,inject } from 'vue'
 export default {
-  props: {
-    data1_c: {
-      type: String,
-      default: '',
-    },
-    data2_c: {
-      type: String,
-      default: '',
-    },
-  },
-  setup(props, context) {
-    const state = reactive({
-      data1_c: props.data1_c,
-      data2_c: props.data2_c,
-    })
+  setup(props, context) {   
+    const data1_c = inject('data1_c')
+    const data2_c = inject('data2_c')
+    return {
+      data1_c,
+      data2_c
+    }
   },
 }
 </script>

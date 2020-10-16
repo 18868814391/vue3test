@@ -2,11 +2,10 @@
   <div>
     <div>{{ appdata }}</div>
     <button @click="changeFather()">changeAPPData</button>
-    <div @click="addMount">i am data frome store {{ count }}</div>
     <br />
     <div>i am data1 in father: {{ data1 }}</div>
     <div>i am data2 in father: {{ data2 }}</div>
-    <Comp1 v-model:data1_c="data1" v-model:data2_c="data2"></Comp1>
+    <Comp1 :data1_c="data1" :data2_c="data2"></Comp1>
   </div>
 </template>
 
@@ -21,11 +20,13 @@ export default {
     // const addMount = () => {
     //   ctx.$store.dispatch('add')
     // }
-    const data1 = ref('123')
-    const data2 = ref('456')
     const changeFather = () => {
       appdata.value = 'children change it'
-    }
+    }    
+    const data1 = ref('123')
+    const data2 = ref('456')
+    provide('data1_c', data1)
+    provide('data2_c', data2)
     return {
       appdata,
       data1,
