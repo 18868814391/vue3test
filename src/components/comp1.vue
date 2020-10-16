@@ -1,7 +1,7 @@
 <template>
   <div class="ccinps">
     <div>I am child components</div>
-    <input class="ccinp" type="text" placeholder="i am in comp1" v-model="data1_c"/>
+    <div>{{data1_c.data1}}<span @click="changeIt()"> let change obj !</span></div>
     <input class="ccinp" type="text" placeholder="i am in comp1" v-model="data2_c"/>
     <div @click="ftk">let father talk</div>
   </div>
@@ -13,6 +13,9 @@ export default {
   setup(props, context) {   
     const data1_c = inject('data1_c')
     const data2_c = inject('data2_c')
+    const changeIt=()=>{
+      data1_c.data1.a=='ss'?data1_c.data1.a='xx':data1_c.data1.a='ss'
+    }
     const ftk=()=>{
       console.log('contxt-c',context)
       context.emit('FatherTalk')
@@ -24,7 +27,8 @@ export default {
       data1_c,
       data2_c,
       alr,
-      ftk
+      ftk,
+      changeIt
     }
   },
 }

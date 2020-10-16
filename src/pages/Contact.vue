@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { provide, inject, ref, getCurrentInstance, computed } from 'vue'
+import { provide, inject, ref,reactive, getCurrentInstance, computed,toRefs } from 'vue'
 import Comp1 from '@/components/comp1.vue'
 export default {
   setup(props, context) {
@@ -31,13 +31,17 @@ export default {
     const trigerChild=()=>{
       RefChilde.value.alr()
     }
-    const data1 = ref('123')
+    // const data1 = ref('123')
+    const state = reactive({
+      data1: {'a':11},
+    })    
     const data2 = ref('456')
-    provide('data1_c', data1)
+    provide('data1_c', state)
     provide('data2_c', data2)
     return {
       appdata,
-      data1,
+      ...toRefs(state),
+      // data1,
       data2,
       changeFather,
       FatherTalk,
