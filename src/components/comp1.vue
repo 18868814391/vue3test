@@ -1,6 +1,6 @@
 <template>
   <div class="ccinps">
-    <div @click="eem()">I am child components</div>
+    <div>I am child components</div>
     <input class="ccinp" type="text" placeholder="i am in comp1" v-model="data1_c"/>
     <input class="ccinp" type="text" placeholder="i am in comp1" v-model="data2_c"/>
   </div>
