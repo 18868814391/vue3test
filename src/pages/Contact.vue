@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cct">
     <div>{{ appdata }}</div>
     <button @click="changeFather()">changeAPPData</button>
     <br />
@@ -60,4 +60,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.cct{
+  font-size: 28px;
+}
+</style>

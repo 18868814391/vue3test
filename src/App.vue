@@ -19,8 +19,8 @@ export default {
     const { ctx } = getCurrentInstance()
     const instance = getCurrentInstance();
     let ddd=instance
-    console.log('answer',instance.ctx)
-    // instance.proxy.$support.helloWorld()
+    // console.log('answer',instance.proxy.ctx)
+
     console.log('iamrouter', ctx.$router)
     console.log('iamVuex', ctx.$store)
     const goPage = (e) => {
