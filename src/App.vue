@@ -16,9 +16,11 @@
 import { ref, provide, inject, getCurrentInstance, computed } from 'vue'
 export default {
   setup(props, context) {
-    console.log('pop',context)
     const { ctx } = getCurrentInstance()
-    console.log(ctx)
+    const instance = getCurrentInstance();
+    let ddd=instance
+    console.log('answer',instance.ctx)
+    // instance.proxy.$support.helloWorld()
     console.log('iamrouter', ctx.$router)
     console.log('iamVuex', ctx.$store)
     const goPage = (e) => {

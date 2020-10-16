@@ -11,7 +11,8 @@
 <script>
 import { ref, reactive, toRefs,inject } from 'vue'
 export default {
-  setup(props, context) {   
+  setup(props, context) {
+    console.log('i am prop',props)
     const data1_c = inject('data1_c')
     const data2_c = inject('data2_c')
     const changeIt=()=>{
