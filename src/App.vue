@@ -14,6 +14,8 @@
 
 <script>
 import { ref, provide, inject, getCurrentInstance, computed } from 'vue'
+import * as syftools from 'syftools'; //全部引入
+import { timeStamp } from 'syftools'; //按需引入
 export default {
   setup(props, context) {
     const { ctx } = getCurrentInstance()
@@ -26,6 +28,8 @@ export default {
     const goPage = (e) => {
       ctx.$router.push(e)
     }
+    console.log(timeStamp('2015/03/05 17:59:00'))
+    console.log(syftools.timeStamp('2015/03/05 17:59:00'))
     // const count = computed(() => ctx.$store.state.count)
     //通过ref+provide提供了父节点往下全部节点的响应式数据传递
     const father = ref('i am data in app.vue')
